@@ -19,21 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.maximizeWindow()
+WebUI.navigateToUrl(GlobalVariable.URL)
 
-WebUI.navigateToUrl('https://example.testproject.io/web/')
+WebUI.setText(findTestObject('Object Repository/EnvironmentTest/Page_TestProject Demo/input_Full Name_name'), GlobalVariable.UserName)
 
-WebUI.setText(findTestObject('Object Repository/Logout/Page_TestProject Demo/input_Full Name_name'), UserName)
+WebUI.setText(findTestObject('Object Repository/EnvironmentTest/Page_TestProject Demo/input_Password_password'), GlobalVariable.Password)
 
-WebUI.setText(findTestObject('Logout/Page_TestProject Demo/input_Password_password'), Password)
+WebUI.click(findTestObject('Object Repository/EnvironmentTest/Page_TestProject Demo/button_Login'))
 
-WebUI.click(findTestObject('Object Repository/Logout/Page_TestProject Demo/button_Login'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Logout/Page_TestProject Demo/h1_TestProject Example page'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/Page_TestProject Demo/button_Logout'), 0)
-
-WebUI.click(findTestObject('Object Repository/Logout/Page_TestProject Demo/button_Logout'))
+WebUI.click(findTestObject('Object Repository/EnvironmentTest/Page_TestProject Demo/button_Logout'))
 
 WebUI.closeBrowser()
 
