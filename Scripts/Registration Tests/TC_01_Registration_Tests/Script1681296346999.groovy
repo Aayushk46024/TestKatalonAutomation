@@ -31,6 +31,9 @@ WebUI.click(findTestObject('Object Repository/Registration/Page_TestProject Demo
 
 WebUI.verifyElementVisible(findTestObject('Object Repository/Registration/Page_TestProject Demo/h1_TestProject Example page'))
 
+CustomKeywords.'com.ea.utilities.CommonUtilities.CheckDorpdownListElementExist'(findTestObject('Registration/Page_TestProject Demo/select_AfghanistanAlbaniaAlgeriaAmerican Sa_e5890c'), 
+    'India')
+
 WebUI.selectOptionByValue(findTestObject('Object Repository/Registration/Page_TestProject Demo/select_AfghanistanAlbaniaAlgeriaAmerican Sa_e5890c'), 
     'IN', true)
 
