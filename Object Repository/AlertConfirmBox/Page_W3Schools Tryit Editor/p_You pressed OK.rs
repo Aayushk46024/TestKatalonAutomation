@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_You pressed OK</name>
+   <tag></tag>
+   <elementGuidId>e179f2bc-4b75-4ea2-bcdb-05c947f48880</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//p[@id='demo']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#demo</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>4ccd7969-bc7f-45cc-9e8a-421572fb6be4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>demo</value>
+      <webElementGuid>9bbc2fee-7e15-4b3d-b32f-3062d28daf67</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>You pressed OK!</value>
+      <webElementGuid>646f648a-d93c-4e21-b27e-9738be3aaf2d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;demo&quot;)</value>
+      <webElementGuid>db0b0642-8fc0-4f3d-85bb-1cc6915f9188</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/AlertConfirmBox/Page_W3Schools Tryit Editor/iframe__iframeResult</value>
+      <webElementGuid>312032c1-d720-4c40-9bf0-27a04214d0c3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//p[@id='demo']</value>
+      <webElementGuid>53c2cf76-aa7f-4033-a058-a4dffd5d6e43</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Try it'])[1]/following::p[1]</value>
+      <webElementGuid>49c62f9c-1b60-4e42-9f89-efcdf4eb5a64</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='JavaScript Confirm Box'])[1]/following::p[1]</value>
+      <webElementGuid>17fd0db1-4e69-42a5-b6a6-29c3bb7baa0a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'demo', '&quot;', ')')])[1]/preceding::p[1]</value>
+      <webElementGuid>38d58a82-fec2-4146-855e-c383c48f930a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='You pressed OK!']/parent::*</value>
+      <webElementGuid>2c3a1d98-6103-481e-992d-33524ca5fca6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p</value>
+      <webElementGuid>0d53f73d-4232-4cc6-99b5-d93738c0aec7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[@id = 'demo' and (text() = 'You pressed OK!' or . = 'You pressed OK!')]</value>
+      <webElementGuid>85e4cbab-3f94-40de-b1bf-f60a95e5b7b6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

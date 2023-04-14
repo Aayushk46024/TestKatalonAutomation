@@ -26,15 +26,15 @@ import com.sun.org.apache.bcel.internal.generic.RETURN
 import internal.GlobalVariable
 
 public class CommonUtilities {
-	
+
 	@Keyword
 	def CheckDorpdownListElementExist(TestObject object, String country) {
 		Boolean flag = false;
-		
+
 		WebElement element = WebUiCommonHelper.findWebElement(object, 20);
-		
+
 		Select ddl = new Select(element);
-		
+
 		for(WebElement elem: ddl.getOptions()) {
 			if(elem.getText().contains(country)) {
 				System.out.println("Element Exists");
@@ -43,8 +43,6 @@ public class CommonUtilities {
 				System.out.println("Element does not Exists");
 			}
 			return flag;
-			
 		}
 	}
 }
-	
