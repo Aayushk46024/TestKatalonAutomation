@@ -18,3 +18,17 @@ dependencies {
   // JSON Schema Validation
   // compile 'io.rest-assured:json-schema-validator:3.2.0'
 }
+
+task tests (type: Test) {
+    ignoreFailures = true
+    testLogging {
+        outputs.upToDateWhen {false}
+        showStandardStreams = true
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+
+    useTestNG(){
+        suites 'Test Suites/Registration TestSuite'
+        reports.html.enabled = true
+    }
+}
