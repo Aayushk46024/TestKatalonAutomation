@@ -9,7 +9,7 @@ pool:
 steps: 
 - task: katalonTask@1
   inputs:
-    version: '5.10.1'
+    version: '8.6.0'
     executeArgs: ' -retry=0 -testSuitePath="Test Suites/Registration TestSuite" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
 
 - task: PublishTestResults@2
