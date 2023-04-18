@@ -12,7 +12,8 @@ steps:
     version: '8.6.0'
     executeArgs: '-retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
   env:
-     KATALON_MACHINE_ID: $(Agent.MachineName)
+     KATALON_MACHINE_ID: 'c2a52371-9b2d-4d60-8431-4f5478a7fcc8'
+     
 
 - task: PublishTestResults@2
   inputs:
