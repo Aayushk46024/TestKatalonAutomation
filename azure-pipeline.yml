@@ -7,14 +7,10 @@ pool:
   vmImage: 'windows-latest'
 
 steps: 
-- task: Gradle@2
+- task: katalonTask@1
   inputs:
-    gradleWrapperFile: 'gradlew'
-    javaHomeOption: 'JDKVersion'
-    gradleOptions: '-Xmx12288m'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'clean tests --rerun-tasks --stacktrace'
+    version: '5.10.1'
+    executeArgs: 'katalonc -noSplash -runMode=console -projectPath="C:\Users\AayushKhandelwal\Katalon Studio\DemoProject_01\DemoProject_01.prj" -retry=0 -testSuitePath="Test Suites/Registration TestSuite" -browserType="Chrome" -executionProfile="default" -apiKey="c2a52371-9b2d-4d60-8431-4f5478a7fcc8" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
 
 - task: PublishTestResults@2
   inputs:
