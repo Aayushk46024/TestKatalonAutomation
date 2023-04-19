@@ -6,7 +6,19 @@
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  machineID: '<your machine ID>'
+  apiKey: '<your API key>'
+
 steps: 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Set the machine ID and API key as environment variables
+      $env:KATALON_MACHINE_ID = "$(machineID)"
+      $env:KATALON_API_KEY = "$(apiKey)"
+      
 - task: katalonTask@1
   inputs:
     version: '8.6.0'
