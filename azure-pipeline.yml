@@ -1,25 +1,18 @@
-# Gradle - Comment test
-# Build your Java project and run tests with Gradle using a Gradle wrapper script.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 pool:
   vmImage: 'windows-latest'
 
-steps: 
-- task: katalonTask@1
+steps:
+- task: DownloadBuildArtifacts@0
   inputs:
-    version: '8.6.0'
-    location: 'C:\Users\VssAdministrator\.katalon\license'
-    executeArgs: '-retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
-     
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/JUnit_Report.xml'
-    mergeTestResults: true
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'KatalonStudio'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
-- task: PublishBuildArtifacts@1
+- task: PowerShell@2
   inputs:
-    ArtifactName: 'Reports'
-    PathtoPublish: '**/DemoProject_01/Reports/'
+    targetType: 'inline'
+    script: |
+      cd $(System.ArtifactsDirectory)\KatalonStudio
+      .\katalon  -retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true
+  displayName: 'Run Katalon Tests'
