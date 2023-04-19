@@ -10,6 +10,7 @@ steps:
 - task: katalonTask@1
   inputs:
     version: '8.6.0'
+    location: 'C:\Users\VssAdministrator\.katalon\license'
     executeArgs: '-retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
      
 - task: PublishTestResults@2
