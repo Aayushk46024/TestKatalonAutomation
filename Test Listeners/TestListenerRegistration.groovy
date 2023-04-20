@@ -29,8 +29,6 @@ class TestListenerRegistration {
 	 */
 	@BeforeTestCase
 	def sampleBeforeTestCase() {
-//		println testCaseContext.getTestCaseId()
-//		println testCaseContext.getTestCaseVariables()
 		WebUI.openBrowser('')
 		WebUI.navigateToUrl('https://example.testproject.io/web/')
 		WebUI.maximizeWindow()
@@ -42,8 +40,6 @@ class TestListenerRegistration {
 	 */
 	@AfterTestCase
 	def sampleAfterTestCase() {
-//		println testCaseContext.getTestCaseId()
-//		println testCaseContext.getTestCaseStatus()
 		WebUI.closeBrowser()
 	}
 
