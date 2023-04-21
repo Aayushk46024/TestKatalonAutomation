@@ -6,11 +6,14 @@
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  projectPath: 'C:\Users\AayushKhandelwal\Katalon Studio\DemoProject_01\DemoProject_01.prj'
+
 steps:    
 - task: katalonTask@1
   inputs:
     version: '8.6.0'
-    executeArgs: '-runMode=console -projectPath="C:\Users\AayushKhandelwal\Katalon Studio\DemoProject_01\DemoProject_01.prj" -retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" -apiKey="2d186128-cba5-4941-a686-a3c2c0bac06c" -testOpsProjectId=1111601 --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true'
+    executeArgs: '-runMode=console -projectPath="${projectPath}" retry=0 -testSuitePath="Test Suites/Registration TestSuite" -browserType="Chrome" -executionProfile="default" -apiKey="2d186128-cba5-4941-a686-a3c2c0bac06c" -testOpsProjectId=1111601 --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true'
 
 - task: PublishTestResults@2
   inputs:
