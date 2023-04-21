@@ -7,7 +7,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  projectPath: 'C:\Users\AayushKhandelwal\Katalon Studio\DemoProject_01\DemoProject_01.prj'
+  projectPath: './Katalon Studio/DemoProject_01/DemoProject_01.prj'
 
 steps:    
 - task: katalonTask@1
