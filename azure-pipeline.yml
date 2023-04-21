@@ -6,31 +6,14 @@
 pool:
   vmImage: 'windows-latest'
 
-variables:
-  machineID: '<your machine ID>'
-  apiKey: '<your API key>'
-
-steps: 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Set the machine ID and API key as environment variables
-      $env:KATALON_MACHINE_ID = "$(machineID)"
-      $env:KATALON_API_KEY = "$(apiKey)"
-      
+steps:    
 - task: katalonTask@1
   inputs:
     version: '8.6.0'
-    executeArgs: '-retry=0 -testSuitePath="Test Suites/Logout TestSuite" -browserType="Chrome" -executionProfile="default" -testOpsProjectId=1111601 --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true'
+    executeArgs: '-runMode=console -projectPath="C:\Users\AayushKhandelwal\Katalon Studio\DemoProject_01\DemoProject_01.prj" -retry=0 -testSuitePath="Test Suites/Login TestSuite" -browserType="Chrome" -executionProfile="default" -apiKey="2d186128-cba5-4941-a686-a3c2c0bac06c" -testOpsProjectId=1111601 --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true'
 
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/JUnit_Report.xml'
+    testResultsFiles: '\Reports\*\Login TestSuite\*\*.xml'
     mergeTestResults: true
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    ArtifactName: 'Reports'
-    PathtoPublish: '**/Katalon Studio/DemoProject_01/Reports/'
